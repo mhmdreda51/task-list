@@ -1,28 +1,28 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:meta/meta.dart';
+// import 'package:flutter_bloc/flutter_bloc.dart';
+// import 'package:meta/meta.dart';
 
-import '../cacheHelper/cache_helper.dart';
+// import '../cacheHelper/cache_helper.dart';
 
-part 'theme_state.dart';
+// part 'theme_state.dart';
 
-class ThemeCubit extends Cubit<ThemeState> {
-  ThemeCubit() : super(ThemeChangeState());
+// class ThemeCubit extends Cubit<ThemeState> {
+//   ThemeCubit() : super(ThemeChangeState());
 
-  static ThemeCubit get(context) => BlocProvider.of(context);
+//   static ThemeCubit get(context) => BlocProvider.of(context);
 
-//===============================================================
-  bool isDark = false;
+// //===============================================================
+//   bool isDark = false;
 
-  void changeTheme({bool? themeModeFromCache}) async {
-    if (themeModeFromCache != null) {
-      isDark = themeModeFromCache;
-    } else {
-      isDark = !isDark;
-      await CacheHelper.cacheTheme(value: isDark);
-      emit(ThemeChangeState());
-    }
-  }
-//===============================================================
-}
-//to use it:
-//ThemeCubit.get(context).changeTheme();
+//   void changeTheme({bool? themeModeFromCache}) async {
+//     if (themeModeFromCache != null) {
+//       isDark = themeModeFromCache;
+//     } else {
+//       isDark = !isDark;
+//       await CacheHelper.cacheTheme(value: isDark);
+//       emit(ThemeChangeState());
+//     }
+//   }
+// //===============================================================
+// }
+// //to use it:
+// //ThemeCubit.get(context).changeTheme();

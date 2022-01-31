@@ -1,8 +1,7 @@
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
-
-import '../../view/task/model/task_model.dart';
-import '../../view/task/model/todo_model.dart';
+import 'package:task_list/core/models/task_model.dart';
+import 'package:task_list/core/models/todo_model.dart';
 
 class DatabaseHelper {
   Future<Database> database() async {
